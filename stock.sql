@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-09-2016 a las 19:53:13
+-- Tiempo de generación: 23-09-2016 a las 01:19:33
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -28,18 +28,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `campanias` (
   `id_campania` int(11) NOT NULL,
-  `codigo` varchar(4) NOT NULL,
-  `titulo` varchar(50) NOT NULL,
-  `descripcion` varchar(200) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `campanias`
---
-
-INSERT INTO `campanias` (`id_campania`, `codigo`, `titulo`, `descripcion`) VALUES
-(2, '10D8', 'S-Numero de Motor', 'Colocación de chapa motor'),
-(3, '15E7', 'S-Sustitución del variador del árbol de levas', '');
+  `codigo` varchar(11) NOT NULL,
+  `titulo` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -49,16 +40,9 @@ INSERT INTO `campanias` (`id_campania`, `codigo`, `titulo`, `descripcion`) VALUE
 
 CREATE TABLE IF NOT EXISTS `imagenes` (
   `id_imagen` int(11) NOT NULL,
-  `fk_id_pieza` int(11) NOT NULL,
-  `path` varchar(200) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `imagenes`
---
-
-INSERT INTO `imagenes` (`id_imagen`, `fk_id_pieza`, `path`) VALUES
-(1, 1, '../images/201609271448.jpg');
+  `path` varchar(100) NOT NULL,
+  `fk_id_pieza` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -67,19 +51,12 @@ INSERT INTO `imagenes` (`id_imagen`, `fk_id_pieza`, `path`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `piezas` (
-  `id_pieza` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `codigo` varchar(17) NOT NULL,
-  `nombre` varchar(10) NOT NULL,
+  `descripcion` varchar(50) NOT NULL,
   `cantidad` int(11) NOT NULL,
   `fk_id_campania` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `piezas`
---
-
-INSERT INTO `piezas` (`id_pieza`, `codigo`, `nombre`, `cantidad`, `fk_id_campania`) VALUES
-(1, '5Z0-945-105-Z -AB', 'Chapa de m', 10, 2);
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Índices para tablas volcadas
@@ -89,7 +66,7 @@ INSERT INTO `piezas` (`id_pieza`, `codigo`, `nombre`, `cantidad`, `fk_id_campani
 -- Indices de la tabla `campanias`
 --
 ALTER TABLE `campanias`
-  ADD PRIMARY KEY (`id_campania`);
+  ADD PRIMARY KEY (`id_campania`), ADD KEY `fk_id_repuesto` (`codigo`);
 
 --
 -- Indices de la tabla `imagenes`
@@ -101,7 +78,7 @@ ALTER TABLE `imagenes`
 -- Indices de la tabla `piezas`
 --
 ALTER TABLE `piezas`
-  ADD PRIMARY KEY (`id_pieza`), ADD KEY `fk_id_campania` (`fk_id_campania`);
+  ADD PRIMARY KEY (`id`), ADD KEY `fk_id_campania` (`fk_id_campania`), ADD KEY `campania` (`fk_id_campania`), ADD KEY `campania_2` (`fk_id_campania`), ADD KEY `campania_3` (`fk_id_campania`), ADD KEY `campania_4` (`fk_id_campania`), ADD KEY `campania_5` (`fk_id_campania`), ADD KEY `campania_6` (`fk_id_campania`), ADD KEY `campania_7` (`fk_id_campania`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -111,17 +88,17 @@ ALTER TABLE `piezas`
 -- AUTO_INCREMENT de la tabla `campanias`
 --
 ALTER TABLE `campanias`
-  MODIFY `id_campania` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id_campania` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  MODIFY `id_imagen` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id_imagen` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `piezas`
 --
 ALTER TABLE `piezas`
-  MODIFY `id_pieza` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- Restricciones para tablas volcadas
 --
@@ -130,7 +107,7 @@ ALTER TABLE `piezas`
 -- Filtros para la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-ADD CONSTRAINT `imagenes_ibfk_1` FOREIGN KEY (`fk_id_pieza`) REFERENCES `piezas` (`id_pieza`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `imagenes_ibfk_1` FOREIGN KEY (`fk_id_pieza`) REFERENCES `piezas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `piezas`
