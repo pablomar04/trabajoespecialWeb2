@@ -9,9 +9,10 @@
 			$this->smarty = new Smarty();
 		}
 
-		function mostrar($piezas){
+		function mostrar($piezas, $camp){
     		$this->smarty->assign('piezas',$piezas);
-    		$this->smarty->display('index.tpl');
+    		$this->smarty->assign('camp',$camp);
+    		$this->smarty->display('index2.tpl');
   		}
   		
 	}

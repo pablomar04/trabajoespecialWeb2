@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-09-2016 a las 14:14:06
+-- Tiempo de generación: 24-09-2016 a las 16:35:26
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -103,7 +103,14 @@ CREATE TABLE IF NOT EXISTS `piezas` (
   `descripcion` varchar(50) NOT NULL,
   `cantidad` int(11) NOT NULL,
   `fk_id_campania` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `piezas`
+--
+
+INSERT INTO `piezas` (`id`, `codigo`, `descripcion`, `cantidad`, `fk_id_campania`) VALUES
+(3, '5Z0-945-448-A', 'Chapa motor', 10, 1);
 
 --
 -- Índices para tablas volcadas
@@ -145,7 +152,7 @@ ALTER TABLE `imagenes`
 -- AUTO_INCREMENT de la tabla `piezas`
 --
 ALTER TABLE `piezas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- Restricciones para tablas volcadas
 --

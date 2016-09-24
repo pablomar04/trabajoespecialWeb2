@@ -13,7 +13,7 @@
 		}
 
 		function inicio(){
-			$this->view->mostrar($this->model->getPiezas());
+			$this->view->mostrar($this->model->getPiezas(),$this->model->getCamp());
 		}
 
 	}

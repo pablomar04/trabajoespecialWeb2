@@ -20,6 +20,12 @@
 			return $sentencia->fetchAll(PDO::FETCH_ASSOC);			
 		}
 
+		function getCamp(){
+			$sentencia = $this->db->prepare('SELECT * from campanias');
+			$sentencia->execute();
+			return $sentencia->fetchAll(PDO::FETCH_ASSOC);			
+		}
+
 	}
 
 ?>
