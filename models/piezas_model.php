@@ -23,7 +23,7 @@
 		function getCamp(){
 			$sentencia = $this->db->prepare('SELECT * from campanias');
 			$sentencia->execute();
-			return $sentencia->fetchAll(PDO::FETCH_ASSOC);			
+			return $sentencia->fetchAll(PDO::FETCH_BOTH);			
 		}
 
 	}

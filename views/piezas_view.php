@@ -10,6 +10,7 @@
 		}
 
 		function mostrar($piezas, $camp){
+			$this->smarty->caching = false;
     		$this->smarty->assign('piezas',$piezas);
     		$this->smarty->assign('camp',$camp);
     		$this->smarty->display('index.tpl');
