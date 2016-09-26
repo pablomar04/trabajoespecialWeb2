@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-09-23 21:57:40
+<?php /* Smarty version Smarty-3.1.14, created on 2016-09-25 20:52:50
          compiled from ".\templates\index2.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:857757e56b593f9510-79933707%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5348fe539c5e9e909104bca812e1f065a9307a47' => 
     array (
       0 => '.\\templates\\index2.tpl',
-      1 => 1474660657,
+      1 => 1474760134,
       2 => 'file',
     ),
   ),
@@ -42,6 +42,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--<script src="https://use.fontawesome.com/eab46a043e.js"></script>-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -76,7 +78,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Carga</a></li>
+            <li><a href="#">Carga ABM</a></li>
 
           </ul>
 
@@ -110,8 +112,9 @@ $_smarty_tpl->tpl_vars['campania']->_loop = true;
                   
                   <th>Codigo</th>
                   <th>Descripcion</th>
-                  <th>Cantidad</th>
                   <th>Campaña</th>
+                  <th>Cantidad</th>
+                  
                   <th></th>
                 </tr>
               </thead>
@@ -128,11 +131,11 @@ $_smarty_tpl->tpl_vars['pieza']->_loop = true;
 </td>
                     <td><?php echo $_smarty_tpl->tpl_vars['pieza']->value['descripcion'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['pieza']->value['cantidad'];?>
-</td>
                     <td><?php echo $_smarty_tpl->tpl_vars['pieza']->value['fk_id_campania'];?>
 </td>
-                    
+                    <td><?php echo $_smarty_tpl->tpl_vars['pieza']->value['cantidad'];?>
+</td>
+                    <td><a href=""><i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></a></i><a href=""><i class="fa fa-minus-square-o fa-2x" aria-hidden="true"></a></i></td>
                     </a>
                   </tr>
                   <?php } ?>

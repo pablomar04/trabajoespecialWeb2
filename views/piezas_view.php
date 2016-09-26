@@ -12,7 +12,7 @@
 		function mostrar($piezas, $camp){
     		$this->smarty->assign('piezas',$piezas);
     		$this->smarty->assign('camp',$camp);
-    		$this->smarty->display('index2.tpl');
+    		$this->smarty->display('index.tpl');
   		}
   		
 	}
