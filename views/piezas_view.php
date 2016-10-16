@@ -9,11 +9,16 @@
 			$this->smarty = new Smarty();
 		}
 
-		function mostrar($piezas, $camp){
-			$this->smarty->caching = false;
-    		$this->smarty->assign('piezas',$piezas);
-    		$this->smarty->assign('camp',$camp);
-    		$this->smarty->display('index.tpl');
+  		function mostrar($piezas){
+  			$this->smarty->assign('piezas',$piezas);
+  			$this->smarty->display('index.tpl');
+
+  		}
+
+  		function mostrarPieza($pieza){
+  			$this->smarty->assign('pieza',$pieza);
+  			$this->smarty->display('verpieza.tpl');
+
   		}
   		
 	}

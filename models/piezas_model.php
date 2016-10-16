@@ -15,15 +15,16 @@
 		}
 
 		function getPiezas(){
-			$sentencia = $this->db->prepare('SELECT * from piezas');
+			$sentencia = $this->db->prepare('SELECT * from piezas INNER JOIN campanias on piezas.fk_id_campania=campanias.id_campania');
 			$sentencia->execute();
 			return $sentencia->fetchAll(PDO::FETCH_ASSOC);			
 		}
 
-		function getCamp(){
-			$sentencia = $this->db->prepare('SELECT * from campanias');
+		function getPieza(){
+			$pieza=$_REQUEST['id_pieza'];
+			$sentencia = $this->db->prepare('SELECT * from piezas INNER JOIN campanias on piezas.fk_id_campania=campanias.id_campania INNER JOIN imagenes on imagenes.fk_id_pieza=piezas.id where piezas.id='.$pieza);
 			$sentencia->execute();
-			return $sentencia->fetchAll(PDO::FETCH_BOTH);			
+			return $sentencia->fetchAll(PDO::FETCH_ASSOC);			
 		}
 
 	}

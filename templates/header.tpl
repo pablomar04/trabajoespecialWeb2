@@ -16,6 +16,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!--<script src="https://use.fontawesome.com/eab46a043e.js"></script>-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -49,7 +50,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li id="das hboard"><a href="" >Dashboard</a></li>
+            <li id="listado"><a href="index.php">Listado</a></li>
             <li id="abm"><a href="">Carga ABM</a></li>
 
           </ul>

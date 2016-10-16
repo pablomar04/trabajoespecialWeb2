@@ -8,9 +8,9 @@ $(document).ready(function(){
 		});
 	});
 
-	$("#dashboard").on('click',function(evt){
+	$("#listado").on('click',function(evt){
 		evt.preventDefault();		
-		$.get("index.php?action=home");
+		$.get("index.php");
 
 	});
 });

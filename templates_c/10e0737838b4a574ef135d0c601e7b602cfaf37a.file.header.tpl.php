@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-09-26 04:17:00
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-16 22:31:03
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:59157e820e74a7735-52091035%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1474851064,
+      1 => 1476649837,
       2 => 'file',
     ),
   ),
@@ -37,6 +37,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!--<script src="https://use.fontawesome.com/eab46a043e.js"></script>-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -70,7 +71,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li id="das hboard"><a href="" >Dashboard</a></li>
+            <li id="listado"><a href="index.php">Listado</a></li>
             <li id="abm"><a href="">Carga ABM</a></li>
 
           </ul>

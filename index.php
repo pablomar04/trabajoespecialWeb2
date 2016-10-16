@@ -10,6 +10,10 @@ switch ($_REQUEST[ConfigApp::$ACTION]) {
   case ConfigApp::$ACTION_DEFAULT:
     $controller->inicio();
     break;
+
+    case ConfigApp::$ACTION_VER_PIEZA:
+    $controller->verpieza();
+    break;
   
   default:
     $controller->inicio();
