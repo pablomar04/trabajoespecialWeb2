@@ -1,22 +1,32 @@
 <?php
-require('controller/piezas_controller.php');
+require('controllers/nav_controller.php');
+require('controllers/piezas_controller.php');
 require ('config/config_app.php');
-$controller = new PiezasController();
-if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
-  $controller->inicio();
-  die();
+
+if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)||$_REQUEST[ConfigApp::$ACTION] == ConfigApp::$ACTION_DEFAULT){
+	$controller = new NavController();
+  	$controller->mostrar(ConfigApp::$ACTION_DEFAULT);
+  	die();
 }
 switch ($_REQUEST[ConfigApp::$ACTION]) {
-  case ConfigApp::$ACTION_DEFAULT:
-    $controller->inicio();
+  	
+  	case ConfigApp::$ACTION_HOME:
+  	$controller = new NavController();
+    $controller->mostrar(ConfigApp::$ACTION_HOME);
+    break;
+
+    case ConfigApp::$ACTION_STOCK:
+    $controller = new PiezasController();
+    $controller->mostrar();
     break;
 
     case ConfigApp::$ACTION_VER_PIEZA:
-    $controller->verpieza();
+    $controller = new PiezasController();
+    $controller->mostrarPieza();
     break;
   
   default:
-    $controller->inicio();
+    echo 'Pagina no encontrada';
     break;
 }
 ?>

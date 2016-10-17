@@ -1,18 +1,8 @@
 <?php
-	class PiezasModel {
+	include_once 'models/model.php';
+	class NavModel extends Model{
 
-		private $db;
 
-		function __construct(){
-			try{
-				
-    			$this->db = new PDO('mysql:host=localhost;dbname=stock;charset=utf8', 'root', '');
-				$this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    		}catch(PDOException $e){
-				echo "ERROR: " . $e->getMessage();
-			}
-
-		}
 
 		function getPiezas(){
 			$sentencia = $this->db->prepare('SELECT * from piezas INNER JOIN campanias on piezas.fk_id_campania=campanias.id_campania');

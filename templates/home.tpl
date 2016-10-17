@@ -1,0 +1,1 @@
+<h1>Este es el home - Control de stock de piezas de campañas</h1>

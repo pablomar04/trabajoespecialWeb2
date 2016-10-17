@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+
 
 <h1>Campaña {$pieza[0].codigo_campania}</h1>
 <h2>{$pieza[0].titulo}</h2>
@@ -13,4 +13,3 @@
 	</div>
 	{/foreach}
 </div>
-{include file="footer.tpl"}

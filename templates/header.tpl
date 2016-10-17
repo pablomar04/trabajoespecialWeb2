@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Stock</title>
+    <title>Campañas</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,12 +46,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Romera Hnos. S.A.</a>
+          <a class="navbar-brand" href="index.php?action=home">Romera Hnos. S.A.</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li id="listado"><a href="index.php">Listado</a></li>
-            <li id="abm"><a href="">Carga ABM</a></li>
+            <li ><a href="#" id="home">Home</a></li>
+            <li ><a href="#" id="stock">Stock</a></li>
+            <li ><a href="#" id="abm">Carga ABM</a></li>
 
           </ul>
 

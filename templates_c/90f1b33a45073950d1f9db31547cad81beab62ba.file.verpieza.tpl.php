@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-16 22:31:03
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-17 07:30:31
          compiled from ".\templates\verpieza.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:222775802ac4d94b508-91512585%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '90f1b33a45073950d1f9db31547cad81beab62ba' => 
     array (
       0 => '.\\templates\\verpieza.tpl',
-      1 => 1476649445,
+      1 => 1476682222,
       2 => 'file',
     ),
   ),
@@ -24,8 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5802ac4d985e90_17005418')) {function content_5802ac4d985e90_17005418($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
-
+<?php if ($_valid && !is_callable('content_5802ac4d985e90_17005418')) {function content_5802ac4d985e90_17005418($_smarty_tpl) {?>
 
 <h1>Campaña <?php echo $_smarty_tpl->tpl_vars['pieza']->value[0]['codigo_campania'];?>
 </h1>
@@ -48,5 +47,4 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
 	</div>
 	<?php } ?>
 </div>
-<?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

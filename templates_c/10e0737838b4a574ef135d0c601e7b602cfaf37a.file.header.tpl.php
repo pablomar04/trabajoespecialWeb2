@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-16 22:31:03
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-17 06:35:25
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:59157e820e74a7735-52091035%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1476649837,
+      1 => 1476678921,
       2 => 'file',
     ),
   ),
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Stock</title>
+    <title>Campañas</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -67,12 +67,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Romera Hnos. S.A.</a>
+          <a class="navbar-brand" href="index.php?action=home">Romera Hnos. S.A.</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li id="listado"><a href="index.php">Listado</a></li>
-            <li id="abm"><a href="">Carga ABM</a></li>
+            <li ><a href="#" id="home">Home</a></li>
+            <li ><a href="#" id="stock">Stock</a></li>
+            <li ><a href="#" id="abm">Carga ABM</a></li>
 
           </ul>
 

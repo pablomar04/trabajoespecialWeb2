@@ -1,25 +1,19 @@
 <?php
-	require 'libs/Smarty.class.php';
+	class PiezasView extends View {
 
-	class PiezasView{
-
-		private $smarty;
-
-		function __construct(){
-			$this->smarty = new Smarty();
-		}
-
-  		function mostrar($piezas){
+		function mostrarPiezas($piezas){
   			$this->smarty->assign('piezas',$piezas);
-  			$this->smarty->display('index.tpl');
+  			$this->smarty->display('stock.tpl');
 
   		}
 
-  		function mostrarPieza($pieza){
+		
+
+		function mostrarPieza($pieza){
   			$this->smarty->assign('pieza',$pieza);
   			$this->smarty->display('verpieza.tpl');
 
   		}
-  		
 	}
+
 ?>
