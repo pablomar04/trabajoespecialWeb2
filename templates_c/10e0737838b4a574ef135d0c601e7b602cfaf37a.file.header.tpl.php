@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2016-10-17 06:35:25
+<?php /* Smarty version Smarty-3.1.14, created on 2016-10-17 07:50:02
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:59157e820e74a7735-52091035%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1476678921,
+      1 => 1476683401,
       2 => 'file',
     ),
   ),
@@ -67,7 +67,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php?action=home">Romera Hnos. S.A.</a>
+         <!-- <a class="navbar-brand" href="index.php?action=home">Romera Hnos. S.A.</a>-->
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">

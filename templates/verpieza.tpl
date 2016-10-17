@@ -1,5 +1,7 @@
+{include file="header.tpl"}
 
-
+ <div id="contenedor">
+    
 <h1>Campaña {$pieza[0].codigo_campania}</h1>
 <h2>{$pieza[0].titulo}</h2>
 <h3>Stock:{$pieza[0].cantidad}</h3>
@@ -13,3 +15,10 @@
 	</div>
 	{/foreach}
 </div>
+
+</div>
+
+{include file="footer.tpl"}
+
+
+
